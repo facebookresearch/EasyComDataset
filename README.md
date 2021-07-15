@@ -11,7 +11,7 @@ The collected data comes from two main sensor modalities, namely audio and visio
 
 <img src="readme/figures/image_1.jpg" width="50%">
 
-> Figure 2. Scenario layout for the participants. The paricipants sit around a table with Participant IDs based on their role or seated location. The circular rings indicate noise sound sources. The sets of Participant IDs are shown for each total number of participants. The AR glasses with egocentric camera and microphone array are indicated by the color-filled glasses.
+> Figure 2. Scenario layout for the participants. The participants sit around a table with Participant IDs based on their role or seated location. The circular rings indicate noise sound sources. The sets of Participant IDs are shown for each total number of participants. The AR glasses with egocentric camera and microphone array are indicated by the color-filled glasses.
 
 ## Overview of Included Data
 The dataset contains the following:
@@ -191,7 +191,7 @@ The metadata files are named according to the corresponding session directory na
 - Each bounding box contains:
    - `Participant_ID` as an integer for the participant ID number.
    - `x1` and `y1` indicating the top left corner of the bounding box.
-   - `x2` and `y2` indiciating the bottom right corner of the bounding box.
+   - `x2` and `y2` indicating the bottom right corner of the bounding box.
 
 ### Glasses Microphone Array Audio
 
@@ -214,7 +214,7 @@ The order of the microphone channels are as follows:
 - Each bounding box contains:
    - `Participant_ID` as an integer for the participant ID number.
    - `x1` and `y1` indicating the top left corner of the bounding box.
-   - `x2` and `y2` indiciating the bottom right corner of the bounding box.
+   - `x2` and `y2` indicating the bottom right corner of the bounding box.
 
 ### Compressed Videos
 
@@ -285,14 +285,14 @@ The extra sessions are provided in addition to the standard dataset, however, th
 ## Further Details on the Calibration Data
 ### Acoustic and Optical Calibration Data
 A comma delimited file (`.csv`) is provided and contains data that relates the image/video pixel space to the acoustic space.
-The `CalibrationPoints.csv` file lists the image/video pixel coordinates in `X` (horizontal) and `Y` (vertical) for a set of `Azimuth` and `Elevation` pairs that sample a sphere. The grid is seperated by 3 degree increments in both azimuth and elevation.
+The `CalibrationPoints.csv` file lists the image/video pixel coordinates in `X` (horizontal) and `Y` (vertical) for a set of `Azimuth` and `Elevation` pairs that sample a sphere. The grid is separated by 3 degree increments in both azimuth and elevation.
 
 ### Array Transfer Functions
 An HDF5 file is provided and contains multiple HDF5 datasets related to describing the array transfer function across microphone elements for a set of points on a sphere. The HDF5 datasets are the following:
 - `DimensionNames`: A string describing the ordering of dimensions of the `IR`, `RealTF` and `ImagTF` data in the HDF5 file.
 - `IR`: A three dimensional array containing array impulse response time samples for each microphone and source channel pair.
-- `RealTF`: The real part of the complex Fourier transform of the array impulse responses contained in `IR`. The first element is the DC componenet and the last element is the Nyquist frequency component.
-- `ImagTF`: The imaginary part of the complex Fourier transform of the array impulse response contained in `IR`. The first element is the DC componenet and the last element is the Nyquist frequency component.
+- `RealTF`: The real part of the complex Fourier transform of the array impulse responses contained in `IR`. The first element is the DC component and the last element is the Nyquist frequency component.
+- `ImagTF`: The imaginary part of the complex Fourier transform of the array impulse response contained in `IR`. The first element is the DC component and the last element is the Nyquist frequency component.
 - `Theta`: The polar angle with respect to the polar axis (zero is pointing upwards from the head).
 - `Phi`: The azimuthal angle of rotation from the meridian plane (zero is pointing forwards from the head).
 
@@ -300,6 +300,7 @@ An HDF5 file is provided and contains multiple HDF5 datasets related to describi
 
 - `SweepType`: The type of sweep for the impulse response excitation signal.
 - `SweepLength_s`: The length of the impulse response excitation signal.
+- `SamplingFreq_Hz`: The sampling frequency (rate) in Hertz of the impulse responses and transfer functions.
 - `SweepLowerFreq_Hz`: The lower frequency bound in Hertz of the impulse response excitation signal.
 - `SweepUpperFreq_Hz`: The upper frequency bound in Hertz of the impulse response excitation signal.
 - `StartingTemp_F`: The temperature in Fahrenheit at the beginning of the impulse response measurement procedure.
@@ -317,7 +318,7 @@ The `rigid_body` element also contains a child element named `properties` contai
 
 ## Notes and Known Issues
 - Some sessions do not contain consecutive one minute data segments due to some one minute data segments being redacted.
-- The videos of the `Main` dataset in `Session_8` under `Video_Compressed` have an incorrect Participant ID banner embedded on the left side. The correct Participant IDs can be found under the `Participant_Photos` directory. The right edge of the banner is found by subtracting `1920` from the total video width, afterwhich the banner can be ignored.
+- The videos of the `Main` dataset in `Session_8` under `Video_Compressed` have an incorrect Participant ID banner embedded on the left side. The correct Participant IDs can be found under the `Participant_Photos` directory. The right edge of the banner is found by subtracting `1920` from the total video width, after which the banner can be ignored.
 - Some pose estimates rotate upside-down at times (occurs < 1% of the time), which is caused by a loss of marker tracking (e.g. caused by a covered/occluded marker).
 
 ## Contact
