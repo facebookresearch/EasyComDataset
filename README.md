@@ -206,6 +206,19 @@ The order of the microphone channels are as follows:
 
 <img src="readme/figures/image_3.jpg" width="33%">
 
+The microphone positions in metric millimeters are: 
+
+| Channel/Mic # | X (mm) | Y (mm) | Z (mm) |
+| :---: | :-: | :-: | :-: |
+| **1** |  82 |  -5 | -29 |
+| **2** |  -1 |  -1 |  30 |
+| **3** | -77 |  -2 |  11 |
+| **4** | -83 |  -5 | -60 |
+| **5** | N/A | N/A | N/A |
+| **6** | N/A | N/A | N/A |
+
+The microphone positions are relative to the tracked pose. See [Tracked Poses](#Tracked-Poses) and [Tracking Marker Configurations](#Tracking-Marker-Configurations) below for more information. The positions of the binaural microphones vary with placement in the ear. 
+
 ### Head Bounding Boxes
 
 - Head bounding boxes generated with a computer vision algorithm.
@@ -312,7 +325,7 @@ The order of the microphone channels are the same as those in `Glasses Microphon
 Multiple checkerboard image files are provided to aid in calibrating the intrinsics of the camera used for recording the egocentric video. The `.png` files named from `1` to `7` can be used for intrinsics calibrations and lens dewarping. The file suffixed with `Checkerboard Image Size` shows the size of the checkerboard pattern. A pre-calibrated intrinsics matrix is provided in `Camera_Intrinsics_Parameters_K.txt`.
 
 ### Tracking Marker Configurations
-The `Asset.xml` file is included from the Optitrack Motive software package. The participants wore glasses that were the rigid bodies with markers. In the XML file, the glasses are the elements named `rigid_body` with child element `markers` containing the individual `marker` elements, which describe the fiducial marker positions. The marker positions can be found as the content of the `position` element in the form `x,y,z`.
+The `Asset.xml` file is included from the Optitrack Motive software package. The participants wore glasses that were the rigid bodies with markers. In the XML file, the glasses are the elements named `rigid_body` with child element `markers` containing the individual `marker` elements, which describe the fiducial marker positions. The marker positions can be found as the content of the `position` element in the form `x,y,z`. Each pose that is tracked is the centroid of its corresponding marker positions.
 
 The `rigid_body` element also contains a child element named `properties` containing several `property` elements with further information about the particular rigid body. The rigid body `property` element with the child element `name` that contains the content `NodeName` is the `property` describing the rigid body's name, which is found as the content under the element `value`. The rigid body names are similar to the participant IDs but are not the same. The rigid body names are labelled as `Glasses` and `Participant#`, where `#` is from `1` to `4` and is incremented for each participant from left to right of the AR glasses wearers point of view.
 
