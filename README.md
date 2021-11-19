@@ -24,6 +24,7 @@ The dataset contains the following:
    -  Annotated target of speech labels.
    -  Annotated voice activity.
    -  Generated head and face bounding boxes with annotated IDs.
+
 Size/Duration:
    -  5 hours 18 minutes and 11 seconds of high quality data.
    -  6.6 hours total (includes data with errors).
@@ -333,6 +334,7 @@ The `rigid_body` element also contains a child element named `properties` contai
 - Some sessions do not contain consecutive one minute data segments due to some one minute data segments being redacted.
 - The videos of the `Main` dataset in `Session_8` under `Video_Compressed` have an incorrect Participant ID banner embedded on the left side. The correct Participant IDs can be found under the `Participant_Photos` directory. The right edge of the banner is found by subtracting `1920` from the total video width, after which the banner can be ignored.
 - Some pose estimates rotate upside-down at times (occurs < 1% of the time), which is caused by a loss of marker tracking (e.g. caused by a covered/occluded marker).
+- There is a typo in the metadata files where `Audio Channels in Video` should be `[5 6]`.
 
 ## Contact
 Please email Jacob Donley and Vladimir Tourbabin at [EasyComDataset@fb.com](mailto:EasyComDataset@fb.com).
