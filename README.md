@@ -181,7 +181,7 @@ The metadata files are named according to the corresponding session directory na
 ### Close Microphone Audio
 
 - Single channel headset close microphone audio signals from all participants except the AR glasses wearer and the restaurant server.
-- Sampling rate of 48kHz.
+- Sampling rate of 48kHz. (Rate is approximate, see [Notes](#Notes-and-Known-Issues))
 - Bit depth of 32bits.
 
 ### Face Bounding Boxes
@@ -335,6 +335,7 @@ The `rigid_body` element also contains a child element named `properties` contai
 - The videos of the `Main` dataset in `Session_8` under `Video_Compressed` have an incorrect Participant ID banner embedded on the left side. The correct Participant IDs can be found under the `Participant_Photos` directory. The right edge of the banner is found by subtracting `1920` from the total video width, after which the banner can be ignored.
 - Some pose estimates rotate upside-down at times (occurs < 1% of the time), which is caused by a loss of marker tracking (e.g. caused by a covered/occluded marker).
 - There is a typo in the metadata files where `Audio Channels in Video` should be `[5 6]`.
+- The sampling rate of the `Close Microphone Audio` is approximately 48008.6Hz and varies slightly between sessions (&pm;0.5Hz).
 
 ## Contact
 Please email Jacob Donley and Vladimir Tourbabin at [EasyComDataset@fb.com](mailto:EasyComDataset@fb.com).
