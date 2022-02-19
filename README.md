@@ -336,6 +336,7 @@ The `rigid_body` element also contains a child element named `properties` contai
 - Some pose estimates rotate upside-down at times (occurs < 1% of the time), which is caused by a loss of marker tracking (e.g. caused by a covered/occluded marker).
 - There is a typo in the metadata files where `Audio Channels in Video` should be `[5 6]`.
 - The sampling rate of the `Close Microphone Audio` is approximately 48008.6Hz and varies slightly between sessions (&pm;0.5Hz).
+- The first video frame is numbered 1 for the face bounding boxes and 0 for the head bounding boxes. Each video has a maximum of 1200 frames.
 
 ## Contact
 Please email Jacob Donley and Vladimir Tourbabin at [EasyComDataset@fb.com](mailto:EasyComDataset@fb.com).
