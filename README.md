@@ -47,7 +47,7 @@ Size/Duration:
 ```
 
 ## Downloading
-You can download the latest version of the dataset from the repository's [releases page](https://github.com/facebookresearch/EasyComDataset/releases).
+You can download the latest version of the dataset by cloning the repository or by following the instructions on the repository's [releases page](https://github.com/facebookresearch/EasyComDataset/releases).
 
 ## Dataset Structure
 The dataset contains several high level directories for the data and auxiliary information. The directories and their contents are explained in detail as follows.
