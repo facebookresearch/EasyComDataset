@@ -264,7 +264,7 @@ The tracked poses are recordings from an Optitrack system that contain translati
 - Each tracked pose sample contains:
    - `Participant_ID` as an integer for the participant ID number.
    - `Position_X`, `Position_Y` and `Position_Z` as the three dimensional cartesian coordinates in metric meters.
-   - `Quaternion_X`, `Quaternion_X`, `Quaternion_X` and `Quaternion_X` as the quaternion rotation.
+   - `Quaternion_X`, `Quaternion_Y`, `Quaternion_Z` and `Quaternion_W` as the quaternion rotation.
    - `isUpSideDown` as an indicator of an upside-down pose (occurs < 1% of the time).
 
 From the perspective of the participant wearing the camera, the coordinate system is oriented as follows:
