@@ -165,6 +165,16 @@ The dataset contains several high level directories for the data and auxiliary i
 ├── **`readme`** (*directory*): Contains images and other data for the readme file.  
 └── `README.md` (*file*): This readme markdown file.  
 
+## Data Split
+The following split is our recommendation:
+
+| Data Subset       | Session #                |
+| :---:             | :-:                      |
+| Train             | `1, 2, 3, 5, 6, 7, 8, 9` |
+| Validation        | `4, 12`                  |
+| Evaluation / Test | `10, 11`                 |
+
+If you have any questions or concerns with this split, please contact us.
 
 ## Further Details on the Data and Structure
 
